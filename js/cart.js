@@ -101,6 +101,15 @@ function updateCartBadges() {
   });
 }
 
+// Helper: Calculate unit price based on variant size
+function getProductPrice(product, size) {
+  if (!product) return 0;
+  if (size && (size === '50ml' && product.sizes && product.sizes.includes('30ml') || size === '100ml' || size === '250ml')) {
+    return product.price * 1.35;
+  }
+  return product.price;
+}
+
 // Calculate totals
 function calculateCartTotals() {
   const cart = getCart();
@@ -109,11 +118,7 @@ function calculateCartTotals() {
   cart.forEach(item => {
     const product = findProduct(item.id);
     if (product) {
-      let price = product.price;
-      if (item.size && (item.size === '50ml' && product.sizes.includes('30ml') || item.size === '100ml' || item.size === '250ml')) {
-        price = product.price * 1.35;
-      }
-      subtotal += price * item.quantity;
+      subtotal += getProductPrice(product, item.size) * item.quantity;
     }
   });
 
@@ -181,10 +186,7 @@ function renderCartDrawer() {
     const product = findProduct(item.id);
     if (!product) return '';
 
-    let unitPrice = product.price;
-    if (item.size && (item.size === '50ml' && product.sizes.includes('30ml') || item.size === '100ml' || item.size === '250ml')) {
-      unitPrice = product.price * 1.35;
-    }
+    const unitPrice = getProductPrice(product, item.size);
     const itemTotal = (unitPrice * item.quantity).toFixed(2);
 
     return `

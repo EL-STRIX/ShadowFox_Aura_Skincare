@@ -16,11 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let quantity = 1;
 
   function calculatePrice() {
-    let price = product.price;
-    if (selectedSize === '50ml' && product.sizes.includes('30ml') || selectedSize === '100ml' || selectedSize === '250ml') {
-      price = product.price * 1.35;
+    if (typeof getProductPrice === 'function') {
+      return getProductPrice(product, selectedSize).toFixed(2);
     }
-    return price.toFixed(2);
+    return product.price.toFixed(2);
   }
 
   // Render Product Details
