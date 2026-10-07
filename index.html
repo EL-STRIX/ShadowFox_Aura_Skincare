@@ -36,6 +36,7 @@
           <li><a href="shop.html?category=serums" class="nav-link">Serums</a></li>
           <li><a href="shop.html?category=cleansers" class="nav-link">Cleansers</a></li>
           <li><a href="shop.html?category=moisturizers" class="nav-link">Moisturizers</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
         </ul>
       </nav>
 
@@ -60,6 +61,7 @@
         <li><a href="shop.html?category=cleansers" class="mobile-nav-link">Daily Cleansers</a></li>
         <li><a href="shop.html?category=oils" class="mobile-nav-link">Botanical Oils</a></li>
         <li><a href="shop.html?category=moisturizers" class="mobile-nav-link">Barrier Creams</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
       </ul>
     </div>
   </header>
@@ -290,7 +292,95 @@
       </div>
     </section>
 
-    <!-- 9. Newsletter Subscription -->
+    <!-- 9. Frequently Asked Questions (FAQ) Section -->
+    <section id="faq" class="section faq-section">
+      <div class="container faq-layout">
+        <!-- Left: FAQ Header & Support Box -->
+        <div class="faq-sidebar">
+          <span class="section-subtitle">Common Questions</span>
+          <h2 class="section-title">Everything You Need to Know</h2>
+          <p class="faq-sidebar-text">
+            Discover the science behind our organic formulations, shipping policies, and daily application rituals.
+          </p>
+          <div class="faq-support-card">
+            <h5>Have a specific question?</h5>
+            <p>Our skin consultants are here to help you build the perfect ritual.</p>
+            <a href="shop.html" class="btn btn-secondary btn-sm">Explore Formulations</a>
+          </div>
+        </div>
+
+        <!-- Right: Elegant Stacked Accordions -->
+        <div class="faq-accordion-list">
+          <!-- FAQ 1 -->
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>Are AURA formulations safe for sensitive or reactive skin?</span>
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. All of our formulations are 100% free from synthetic fragrances, drying alcohols, parabens, and essential oil allergens. Every formulation undergoes clinical dermatologist patch testing on sensitive skin panels to guarantee barrier compatibility.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How does Ayurvedic Bakuchiol compare to traditional Retinol?</span>
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Bakuchiol stimulates cellular turnover and collagen synthesis similarly to retinol. However, it does not cause redness, peeling, or sun sensitivity, making it gentle enough for sensitive skin and safe for both morning and evening routines.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What is your shipping policy and delivery timeline?</span>
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-answer">
+              <p>We offer <strong>Complimentary Standard Shipping</strong> on all domestic orders over $60. Standard orders ship within 24 hours and arrive within 2–4 business days. Flat-rate $5.00 shipping applies to orders under $60.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What is your return and 30-day satisfaction guarantee?</span>
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-answer">
+              <p>We stand behind every bottle. If you are not completely satisfied with your botanical results within 30 days of delivery, contact our concierge team for a full refund or complimentary product exchange.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Are your bottles and shipping packaging sustainable?</span>
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. We package all formulations in UV-protective amber and frosted glass bottles that are 100% infinitely recyclable. All shipping boxes are made from 100% post-consumer recycled paper and printed with non-toxic vegetable inks.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How should I layer multiple AURA serums in my ritual?</span>
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Always apply products from thinnest to thickest texture: cleanse first, apply your active serum (like Vitamin C in the AM or Bakuchiol in the PM), follow with your Ceramide Cream, and seal with 2–3 drops of Facial Squalane Oil.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Newsletter Subscription -->
     <section class="newsletter-section">
       <div class="container">
         <div class="newsletter-card">
@@ -308,7 +398,7 @@
     </section>
   </main>
 
-  <!-- 10. Slide-out Cart Drawer -->
+  <!-- Slide-out Cart Drawer (Interactive Drawer - opens on bag click or add to bag) -->
   <div class="cart-overlay" id="cartOverlay"></div>
   <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
     <div class="cart-drawer-header">
@@ -358,7 +448,7 @@
     </div>
   </aside>
 
-  <!-- 11. Simulated Checkout Modal -->
+  <!-- Simulated Checkout Modal (Interactive Modal - opens on checkout click) -->
   <div class="modal-overlay" id="checkoutModal">
     <div class="checkout-modal-card">
       <button type="button" class="close-modal-btn" id="closeCheckoutBtn" aria-label="Close Modal">
@@ -425,7 +515,7 @@
     </div>
   </div>
 
-  <!-- 12. Main Footer -->
+  <!-- 11. Main Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -465,10 +555,10 @@
         <div class="footer-column">
           <h4>Customer Care</h4>
           <ul>
-            <li><a href="index.html">Shipping & Returns</a></li>
-            <li><a href="index.html">Skin Consultation</a></li>
-            <li><a href="index.html">FAQ</a></li>
-            <li><a href="index.html">Contact Us</a></li>
+            <li><a href="#faq">Shipping & Returns</a></li>
+            <li><a href="#faq">FAQ & Guidance</a></li>
+            <li><a href="shop.html">Track Ritual Orders</a></li>
+            <li><a href="mailto:concierge@aurabotanicals.com">Concierge Support</a></li>
           </ul>
         </div>
       </div>
