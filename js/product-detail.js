@@ -41,15 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Left: Image Showcase -->
         <div class="product-gallery-wrap">
           <div class="product-main-media" id="productMainMedia">
-            ${getProductSVG(product.iconType, product.imageBg, '#C86B4A')}
+            <img src="${product.image}" alt="${product.name}" class="detail-main-img" id="mainProductImage">
             <span class="detail-badge">${product.badge}</span>
           </div>
           <div class="product-thumbnails">
             <button class="thumb-btn active" onclick="switchThumbnail(0)">
-              ${getProductSVG(product.iconType, product.imageBg, '#C86B4A')}
+              <img src="${product.image}" alt="${product.name} thumbnail" class="thumb-img">
             </button>
             <button class="thumb-btn" onclick="switchThumbnail(1)">
-              ${getProductSVG(product.iconType, '#FAF8F5', '#A9573B')}
+              <img src="assets/hero-product.jpg" alt="Botanical studio thumbnail" class="thumb-img">
             </button>
           </div>
         </div>
@@ -211,17 +211,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Thumbnail switcher
   window.switchThumbnail = function(index) {
-    const mainMedia = document.getElementById('productMainMedia');
+    const mainImg = document.getElementById('mainProductImage');
     const thumbs = document.querySelectorAll('.thumb-btn');
     thumbs.forEach((t, i) => {
       if (i === index) t.classList.add('active');
       else t.classList.remove('active');
     });
-    if (mainMedia) {
+    if (mainImg) {
       if (index === 0) {
-        mainMedia.innerHTML = `${getProductSVG(product.iconType, product.imageBg, '#C86B4A')}<span class="detail-badge">${product.badge}</span>`;
+        mainImg.src = product.image;
       } else {
-        mainMedia.innerHTML = `${getProductSVG(product.iconType, '#FAF8F5', '#A9573B')}<span class="detail-badge">${product.badge}</span>`;
+        mainImg.src = 'assets/hero-product.jpg';
       }
     }
   };
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <article class="product-card">
         <div class="product-card-media">
           <a href="product.html?id=${item.id}" class="product-img-link" aria-label="${item.name}">
-            ${getProductSVG(item.iconType, item.imageBg, '#C86B4A')}
+            <img src="${item.image}" alt="${item.name}" class="product-img" loading="lazy">
           </a>
           <button type="button" class="quick-add-btn" onclick="addToCart('${item.id}', '${item.sizes[0]}', 1)" aria-label="Quick add to bag">
             <i class="fa-solid fa-bag-shopping"></i> Quick Add

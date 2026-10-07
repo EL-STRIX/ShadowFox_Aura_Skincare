@@ -109,7 +109,6 @@ function calculateCartTotals() {
   cart.forEach(item => {
     const product = findProduct(item.id);
     if (product) {
-      // Optional: larger sizes have slight price adjustment (+ $10 for larger variant)
       let price = product.price;
       if (item.size && (item.size === '50ml' && product.sizes.includes('30ml') || item.size === '100ml' || item.size === '250ml')) {
         price = product.price * 1.35;
@@ -191,7 +190,7 @@ function renderCartDrawer() {
     return `
       <div class="cart-item" data-id="${item.id}" data-size="${item.size}">
         <div class="cart-item-img">
-          ${getProductSVG(product.iconType, product.imageBg, '#C86B4A')}
+          <img src="${product.image}" alt="${product.name}" class="cart-item-img-tag" loading="lazy">
         </div>
         <div class="cart-item-details">
           <div class="cart-item-header">

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="product-card-media">
             <span class="product-badge">${product.badge}</span>
             <a href="product.html?id=${product.id}" class="product-img-link" aria-label="${product.name}">
-              ${getProductSVG(product.iconType, product.imageBg, '#C86B4A')}
+              <img src="${product.image}" alt="${product.name}" class="product-img" loading="lazy">
             </a>
             <button type="button" class="quick-add-btn" onclick="addToCart('${product.id}', '${defaultSize}', 1)" aria-label="Quick add to bag">
               <i class="fa-solid fa-bag-shopping"></i> Quick Add
