@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Botanical Formulations | AURA Botanicals</title>
+  <meta name="description"
+    content="Explore our complete line of organic plant-powered skincare formulations including active serums, gentle cleansers, and barrier restorative creams.">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- 1. Announcement Top Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <span>🌿 Complimentary standard shipping on all orders over <strong>$60</strong> | Use code <strong>WELCOME10</strong> for 10% off</span>
+    </div>
+  </div>
+
+  <!-- 2. Main Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">AURA <span>Botanicals</span></a>
+
+      <nav class="nav-menu" id="desktopNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link active">Shop Formulations</a></li>
+          <li><a href="shop.html?category=serums" class="nav-link">Serums</a></li>
+          <li><a href="shop.html?category=cleansers" class="nav-link">Cleansers</a></li>
+          <li><a href="shop.html?category=moisturizers" class="nav-link">Moisturizers</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-action-btn open-cart-btn" aria-label="Open Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+        <button type="button" class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="shop.html" class="mobile-nav-link">All Formulations</a></li>
+        <li><a href="shop.html?category=serums" class="mobile-nav-link">Treatment Serums</a></li>
+        <li><a href="shop.html?category=cleansers" class="mobile-nav-link">Daily Cleansers</a></li>
+        <li><a href="shop.html?category=oils" class="mobile-nav-link">Botanical Oils</a></li>
+        <li><a href="shop.html?category=moisturizers" class="mobile-nav-link">Barrier Creams</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. Shop Hero Title Banner -->
+    <section class="shop-hero">
+      <div class="container">
+        <span class="section-subtitle">The Catalog</span>
+        <h1 class="section-title">Botanical Formulations</h1>
+        <p class="section-desc">Concentrated, bioactive plant extracts engineered for sensitive, barrier-compromised skin.</p>
+      </div>
+    </section>
+
+    <!-- 4. Shop Interactive Controls & Product Grid -->
+    <section class="section" style="padding-top: 30px;">
+      <div class="container">
+        
+        <!-- Filter Pills & Search / Sort Controls -->
+        <div class="shop-controls-bar">
+          <!-- Category Filter Buttons -->
+          <div class="category-filter-group">
+            <button type="button" class="category-filter-btn active" data-category="all">All (8)</button>
+            <button type="button" class="category-filter-btn" data-category="serums">Serums</button>
+            <button type="button" class="category-filter-btn" data-category="cleansers">Cleansers</button>
+            <button type="button" class="category-filter-btn" data-category="oils">Facial Oils</button>
+            <button type="button" class="category-filter-btn" data-category="moisturizers">Moisturizers</button>
+          </div>
+
+          <!-- Search & Sort Controls -->
+          <div class="shop-search-sort">
+            <div class="shop-search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="shopSearchInput" placeholder="Search ingredients or benefits...">
+            </div>
+
+            <select class="shop-sort-select" id="shopSortSelect" aria-label="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Meta status line -->
+        <div class="shop-meta-info">
+          <span id="activeCategoryLabel" style="font-weight: 600; color: var(--text-primary);">All Botanical Formulations</span>
+          <span id="shopProductCount">Showing 8 products</span>
+        </div>
+
+        <!-- Dynamic Product Listing Grid -->
+        <div class="products-grid" id="shopProductsGrid">
+          <!-- Populated dynamically by shop.js -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 5. Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <h3>Your Bag</h3>
+      <button type="button" class="close-cart-btn" id="closeCartBtn" aria-label="Close Shopping Bag">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="cart-shipping-banner">
+      <p class="shipping-text" id="cartShippingText">Free shipping on orders over <strong>$60.00</strong></p>
+      <div class="shipping-progress-wrap">
+        <div class="shipping-progress-bar" id="cartShippingBar"></div>
+      </div>
+    </div>
+
+    <div class="cart-drawer-body">
+      <!-- Empty State -->
+      <div class="cart-empty-state" id="cartDrawerEmpty">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h4>Your bag is currently empty</h4>
+        <p>Explore our organic botanical formulations to find your daily ritual.</p>
+        <button type="button" class="btn btn-primary" onclick="closeCartDrawer()">Continue Browsing</button>
+      </div>
+
+      <!-- Items List Container -->
+      <div class="cart-items-list" id="cartDrawerItems"></div>
+    </div>
+
+    <!-- Footer Summary & Checkout -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
+      <form class="promo-form" id="promoCodeForm">
+        <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. WELCOME10)">
+        <button type="submit" class="btn btn-secondary btn-sm">Apply</button>
+      </form>
+      <p class="promo-msg" id="promoMsg"></p>
+
+      <div class="cart-summary-row">
+        <span>Estimated Total</span>
+        <span id="cartDrawerSubtotal">$0.00</span>
+      </div>
+
+      <button type="button" class="btn btn-primary checkout-btn" id="checkoutBtn">
+        Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- 6. Simulated Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="checkout-modal-card">
+      <button type="button" class="close-modal-btn" id="closeCheckoutBtn" aria-label="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="checkoutFormState">
+        <span class="section-subtitle">Secure Order</span>
+        <h3 style="margin-top: 4px; font-size: 1.4rem;">Checkout Simulation</h3>
+        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 4px;">Enter delivery details to complete your order.</p>
+
+        <form class="checkout-form" id="simulatedCheckoutForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cFirstName">First Name</label>
+              <input type="text" id="cFirstName" required placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="cLastName">Last Name</label>
+              <input type="text" id="cLastName" required placeholder="Doe">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cEmail">Email Address</label>
+            <input type="email" id="cEmail" required placeholder="jane@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="cAddress">Shipping Address</label>
+            <input type="text" id="cAddress" required placeholder="123 Botanical Way">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cCity">City</label>
+              <input type="text" id="cCity" required placeholder="San Francisco">
+            </div>
+            <div class="form-group">
+              <label for="cZip">Postal Code</label>
+              <input type="text" id="cZip" required placeholder="94103">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cPayment">Payment Method</label>
+            <select id="cPayment" required>
+              <option value="card">Credit / Debit Card</option>
+              <option value="applepay">Apple Pay / Google Pay</option>
+              <option value="cod">Cash on Delivery</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Place Simulated Order</button>
+        </form>
+      </div>
+
+      <div id="checkoutSuccessState" class="checkout-success-state">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Order Confirmed!</h3>
+        <p>Thank you for shopping with AURA Botanicals. Your botanical formulations are being freshly prepared.</p>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='shop.html'">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Main Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">AURA <span>Botanicals</span></a>
+          <p>
+            Holistic, clinically verified organic skincare formulated to strengthen and revitalize your natural skin
+            barrier with pure botanical bio-actives.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://github.com/EL-STRIX" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Formulations</h4>
+          <ul>
+            <li><a href="shop.html?category=serums">Treatment Serums</a></li>
+            <li><a href="shop.html?category=cleansers">Daily Cleansers</a></li>
+            <li><a href="shop.html?category=oils">Facial Oils</a></li>
+            <li><a href="shop.html?category=moisturizers">Barrier Creams</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Brand & Science</h4>
+          <ul>
+            <li><a href="index.html">Our Philosophy</a></li>
+            <li><a href="index.html">Ingredient Sourcing</a></li>
+            <li><a href="index.html">Clinical Results</a></li>
+            <li><a href="index.html">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="index.html">Shipping & Returns</a></li>
+            <li><a href="index.html">Skin Consultation</a></li>
+            <li><a href="index.html">FAQ</a></li>
+            <li><a href="index.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="copyrightYear"></span> AURA Botanicals Skincare Inc. All rights reserved.</p>
+        <p>Frontend Internship Submission — Intermediate Level (ShadowFox)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

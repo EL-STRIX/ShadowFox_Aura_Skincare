@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA Botanicals | Organic Minimalist Skincare & Wellness</title>
+  <meta name="description"
+    content="AURA Botanicals crafts clean, clinically effective organic skincare formulations designed to nourish and protect your skin barrier.">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- 1. Announcement Top Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <span>🌿 Complimentary standard shipping on all orders over <strong>$60</strong> | Use code <strong>WELCOME10</strong> for 10% off</span>
+    </div>
+  </div>
+
+  <!-- 2. Main Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">AURA <span>Botanicals</span></a>
+
+      <nav class="nav-menu" id="desktopNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop Formulations</a></li>
+          <li><a href="shop.html?category=serums" class="nav-link">Serums</a></li>
+          <li><a href="shop.html?category=cleansers" class="nav-link">Cleansers</a></li>
+          <li><a href="shop.html?category=moisturizers" class="nav-link">Moisturizers</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="shop.html" class="nav-action-btn" aria-label="Search Catalog"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <button type="button" class="nav-action-btn open-cart-btn" id="headerCartBtn" aria-label="Open Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count-badge" id="headerCartCount" style="display: none;">0</span>
+        </button>
+        <button type="button" class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="shop.html" class="mobile-nav-link">All Formulations</a></li>
+        <li><a href="shop.html?category=serums" class="mobile-nav-link">Treatment Serums</a></li>
+        <li><a href="shop.html?category=cleansers" class="mobile-nav-link">Daily Cleansers</a></li>
+        <li><a href="shop.html?category=oils" class="mobile-nav-link">Botanical Oils</a></li>
+        <li><a href="shop.html?category=moisturizers" class="mobile-nav-link">Barrier Creams</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-tag">Botanical Bio-Actives</span>
+          <h1 class="hero-title">Pure Botanical Science For Resilient Skin</h1>
+          <p class="hero-text">
+            Thoughtfully formulated with cold-pressed plant extracts, adaptogenic herbs, and bio-identical ceramides to
+            nourish your moisture barrier without compromise.
+          </p>
+          <div class="hero-cta-group">
+            <a href="shop.html" class="btn btn-primary">Explore Formulations <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="shop.html?category=serums" class="btn btn-secondary">Best Sellers</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>100%</h4>
+              <p>Plant-Derived</p>
+            </div>
+            <div class="stat-item">
+              <h4>0%</h4>
+              <p>Synthetic Fragrance</p>
+            </div>
+            <div class="stat-item">
+              <h4>4.9 ★</h4>
+              <p>Customer Loved</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <!-- Editorial Hero Product SVG -->
+          <svg viewBox="0 0 260 300" class="hero-visual-svg" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="130" cy="150" r="115" fill="#EBE6DD"/>
+            <!-- Dropper Top -->
+            <rect x="124" y="32" width="14" height="24" rx="3" fill="#20252B"/>
+            <rect x="116" y="56" width="30" height="8" rx="2" fill="#DDD9D0"/>
+            <path d="M110" y="64" d="M110 64 L152 64 L146 90 L116 90 Z" fill="#20252B"/>
+            <rect x="108" y="90" width="46" height="8" rx="2" fill="#DDD9D0"/>
+            <!-- Amber Glass Bottle Body -->
+            <path d="M92 98 Q92 110 98 116 L98 238 Q98 250 110 250 L152 250 Q164 250 164 238 L164 116 Q170 110 170 98 Z" fill="#C86B4A" opacity="0.88"/>
+            <!-- Aesthetic Label -->
+            <rect x="102" y="132" width="58" height="88" rx="3" fill="#FAF8F5" stroke="#DDD9D0" stroke-width="1.5"/>
+            <line x1="112" y1="150" x2="150" y2="150" stroke="#20252B" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="118" y1="160" x2="144" y2="160" stroke="#667078" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="114" y1="174" x2="148" y2="174" stroke="#C86B4A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="131" cy="192" r="4" fill="#C86B4A"/>
+          </svg>
+
+          <div class="hero-floating-badge">
+            <p class="floating-title">Bakuchiol & Niacinamide</p>
+            <p class="floating-sub">Award Winning Formulation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Brand Values Section -->
+    <section class="values-section">
+      <div class="container values-grid">
+        <div class="value-item">
+          <div class="value-icon"><i class="fa-solid fa-seedling"></i></div>
+          <div class="value-info">
+            <h4>Clean Botanical Actives</h4>
+            <p>100% plant-derived nutrients</p>
+          </div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon"><i class="fa-solid fa-flask-vial"></i></div>
+          <div class="value-info">
+            <h4>Clinically Tested</h4>
+            <p>Proven barrier restoration</p>
+          </div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon"><i class="fa-solid fa-recycle"></i></div>
+          <div class="value-info">
+            <h4>Sustainable Glass</h4>
+            <p>100% recyclable packaging</p>
+          </div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon"><i class="fa-solid fa-paw"></i></div>
+          <div class="value-info">
+            <h4>Cruelty-Free & Vegan</h4>
+            <p>Leaping Bunny certified</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Featured Formulations -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Curated Rituals</span>
+          <h2 class="section-title">Essential Formulations</h2>
+          <p class="section-desc">Our foundational skincare staples designed to restore glow, balance, and hydration.</p>
+        </div>
+
+        <div class="products-grid" id="homeFeaturedGrid">
+          <!-- Rendered dynamically by main.js from PRODUCTS array -->
+        </div>
+
+        <div class="text-center" style="margin-top: 40px; text-align: center;">
+          <a href="shop.html" class="btn btn-secondary">View All 8 Formulations <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Category Exploration -->
+    <section class="section categories-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Targeted Care</span>
+          <h2 class="section-title">Shop By Skincare Step</h2>
+        </div>
+
+        <div class="categories-grid">
+          <a href="shop.html?category=cleansers" class="category-card">
+            <div class="category-icon"><i class="fa-solid fa-pump-soap"></i></div>
+            <h3>Cleansers & Mists</h3>
+            <p>Gentle pH-balanced daily purification</p>
+          </a>
+
+          <a href="shop.html?category=serums" class="category-card">
+            <div class="category-icon"><i class="fa-solid fa-eye-dropper"></i></div>
+            <h3>Active Serums</h3>
+            <p>Concentrated botanical vitamins & actives</p>
+          </a>
+
+          <a href="shop.html?category=oils" class="category-card">
+            <div class="category-icon"><i class="fa-solid fa-droplet"></i></div>
+            <h3>Facial Oils</h3>
+            <p>Weightless lipid barrier recovery</p>
+          </a>
+
+          <a href="shop.html?category=moisturizers" class="category-card">
+            <div class="category-icon"><i class="fa-solid fa-spa"></i></div>
+            <h3>Barrier Creams</h3>
+            <p>Ceramide rich deep multi-depth hydration</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Botanical Science Spotlight -->
+    <section class="section spotlight-section">
+      <div class="container">
+        <div class="spotlight-card">
+          <div class="spotlight-content">
+            <span class="section-subtitle">The Science of Plants</span>
+            <h2 class="spotlight-title">Formulated Without Compromise</h2>
+            <p class="spotlight-text">
+              Every drop is backed by clinical research and harvested from sustainable organic growers. We replace
+              synthetic fillers with concentrated cold-pressed plant hydrosols.
+            </p>
+
+            <div class="spotlight-pillars">
+              <div class="pillar-item">
+                <h5>Ayurvedic Bakuchiol</h5>
+                <p>Smooths skin texture with zero retinol peeling or sensitivity.</p>
+              </div>
+              <div class="pillar-item">
+                <h5>5-Ceramide Matrix</h5>
+                <p>Bio-identical lipids that mirror your skin's natural defense.</p>
+              </div>
+              <div class="pillar-item">
+                <h5>Cold-Pressed Squalane</h5>
+                <p>Weightless hydration derived from renewable sugarcane.</p>
+              </div>
+              <div class="pillar-item">
+                <h5>Fermented Rice Water</h5>
+                <p>Amino-acid rich brightening without harsh stripping.</p>
+              </div>
+            </div>
+
+            <div>
+              <a href="shop.html" class="btn btn-primary">Discover The Science</a>
+            </div>
+          </div>
+
+          <div class="spotlight-media">
+            <!-- Botanical Leaf Art -->
+            <svg viewBox="0 0 280 280" style="max-width: 240px; width: 100%;" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="140" cy="140" r="120" fill="#FAF8F5" stroke="#DDD9D0" stroke-width="2"/>
+              <!-- Plant Stem and Leaves -->
+              <path d="M140 220 Q140 140 140 60" stroke="#C86B4A" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M140 160 Q180 140 190 110 Q160 115 140 150" fill="#C86B4A" opacity="0.85"/>
+              <path d="M140 130 Q100 110 90 80 Q120 85 140 120" fill="#C86B4A" opacity="0.85"/>
+              <path d="M140 90 Q170 70 175 45 Q150 50 140 80" fill="#C86B4A" opacity="0.85"/>
+              <circle cx="140" cy="55" r="6" fill="#20252B"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Customer Reviews & Press -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Real Results</span>
+          <h2 class="section-title">Loved By Sensitive Skin</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "The Bakuchiol & Niacinamide Serum transformed my redness and uneven skin texture in three weeks. It is so
+              gentle and calming!"
+            </p>
+            <div class="test-author">
+              <h5>Elena Rostova</h5>
+              <span>Verified Buyer — Radiance Serum</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "Finally a rich moisturizer that doesn't clog my pores. The Ceramide & Matcha Cream feels like a drink of
+              water for tired skin."
+            </p>
+            <div class="test-author">
+              <h5>Marcus Chen</h5>
+              <span>Verified Buyer — Hydration Cream</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "The packaging is gorgeous glass and the formulations are truly top tier. A permanent staple in my daily
+              morning ritual."
+            </p>
+            <div class="test-author">
+              <h5>Sophia Patel</h5>
+              <span>Verified Buyer — Barrier Recovery Oil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Newsletter Subscription -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <span class="section-subtitle">The AURA Circle</span>
+          <h2>Join Our Mindful Skincare Community</h2>
+          <p>Receive exclusive botanical ritual guides, formulation launches, and 10% off your initial order.</p>
+
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <p class="newsletter-success" id="newsletterSuccess">Welcome to AURA Botanicals! Check your inbox for your 10% discount code.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10. Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <h3>Your Bag</h3>
+      <button type="button" class="close-cart-btn" id="closeCartBtn" aria-label="Close Shopping Bag">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="cart-shipping-banner">
+      <p class="shipping-text" id="cartShippingText">Free shipping on orders over <strong>$60.00</strong></p>
+      <div class="shipping-progress-wrap">
+        <div class="shipping-progress-bar" id="cartShippingBar"></div>
+      </div>
+    </div>
+
+    <div class="cart-drawer-body">
+      <!-- Empty State -->
+      <div class="cart-empty-state" id="cartDrawerEmpty">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h4>Your bag is currently empty</h4>
+        <p>Explore our organic botanical formulations to find your daily ritual.</p>
+        <a href="shop.html" class="btn btn-primary" onclick="closeCartDrawer()">Shop Formulations</a>
+      </div>
+
+      <!-- Items List Container -->
+      <div class="cart-items-list" id="cartDrawerItems"></div>
+    </div>
+
+    <!-- Footer Summary & Checkout -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
+      <form class="promo-form" id="promoCodeForm">
+        <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. WELCOME10)">
+        <button type="submit" class="btn btn-secondary btn-sm">Apply</button>
+      </form>
+      <p class="promo-msg" id="promoMsg"></p>
+
+      <div class="cart-summary-row">
+        <span>Estimated Total</span>
+        <span id="cartDrawerSubtotal">$0.00</span>
+      </div>
+
+      <button type="button" class="btn btn-primary checkout-btn" id="checkoutBtn">
+        Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- 11. Simulated Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="checkout-modal-card">
+      <button type="button" class="close-modal-btn" id="closeCheckoutBtn" aria-label="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="checkoutFormState">
+        <span class="section-subtitle">Secure Order</span>
+        <h3 style="margin-top: 4px; font-size: 1.4rem;">Checkout Simulation</h3>
+        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 4px;">Enter delivery details to complete your order.</p>
+
+        <form class="checkout-form" id="simulatedCheckoutForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cFirstName">First Name</label>
+              <input type="text" id="cFirstName" required placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="cLastName">Last Name</label>
+              <input type="text" id="cLastName" required placeholder="Doe">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cEmail">Email Address</label>
+            <input type="email" id="cEmail" required placeholder="jane@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="cAddress">Shipping Address</label>
+            <input type="text" id="cAddress" required placeholder="123 Botanical Way">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cCity">City</label>
+              <input type="text" id="cCity" required placeholder="San Francisco">
+            </div>
+            <div class="form-group">
+              <label for="cZip">Postal Code</label>
+              <input type="text" id="cZip" required placeholder="94103">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cPayment">Payment Method</label>
+            <select id="cPayment" required>
+              <option value="card">Credit / Debit Card</option>
+              <option value="applepay">Apple Pay / Google Pay</option>
+              <option value="cod">Cash on Delivery</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Place Simulated Order</button>
+        </form>
+      </div>
+
+      <div id="checkoutSuccessState" class="checkout-success-state">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Order Confirmed!</h3>
+        <p>Thank you for shopping with AURA Botanicals. Your botanical formulations are being freshly prepared.</p>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='index.html'">Return to Storefront</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12. Main Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">AURA <span>Botanicals</span></a>
+          <p>
+            Holistic, clinically verified organic skincare formulated to strengthen and revitalize your natural skin
+            barrier with pure botanical bio-actives.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://github.com/EL-STRIX" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Formulations</h4>
+          <ul>
+            <li><a href="shop.html?category=serums">Treatment Serums</a></li>
+            <li><a href="shop.html?category=cleansers">Daily Cleansers</a></li>
+            <li><a href="shop.html?category=oils">Facial Oils</a></li>
+            <li><a href="shop.html?category=moisturizers">Barrier Creams</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Brand & Science</h4>
+          <ul>
+            <li><a href="index.html">Our Philosophy</a></li>
+            <li><a href="index.html">Ingredient Sourcing</a></li>
+            <li><a href="index.html">Clinical Results</a></li>
+            <li><a href="index.html">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="index.html">Shipping & Returns</a></li>
+            <li><a href="index.html">Skin Consultation</a></li>
+            <li><a href="index.html">FAQ</a></li>
+            <li><a href="index.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="copyrightYear"></span> AURA Botanicals Skincare Inc. All rights reserved.</p>
+        <p>Frontend Internship Submission — Intermediate Level (ShadowFox)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
